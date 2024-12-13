@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROYAL QUOTES</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="TEQlogo.jpg" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js? client=ca-pub-4563212534153000"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="background" data-mode="light">
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo">Royal<span class="logospan">Quotes.</a></span>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link" id="active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="Motivational.html" class="nav-link">Motivational</a>
+          </li>
+          <li class="nav-item">
+            <a href="Life.html" class="nav-link">Life</a>
+          </li>
+          <li class="nav-item">
+            <a href="love.html" class="nav-link">Love</a>
+          </li>
+          <li class="nav-item">
+            <a href="Patches.html" class="nav-link">Patches</a>
+          </li>
+          <li class="nav-item">
+            <a href="Biblical.html" class="nav-link">Divine</a>
+          </li>
+        </ul>
+        <button class="mode-toggle" id="mode-switch">&#x2600</button>
+        
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <hr color="gold">
+    <div class="container">
+    <div class="slideshow-container">
+      <center>
+      <div class="mySlides fade">
+        <img src="welcome.jpg" style="width: 100%" class="sliders" />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="love.jpg"
+          style="width: 100%"
+          class="sliders"
+        />
+      </div>
+      <div class="mySlides fade">
+        <img src="life.jpg" style="width:100%" class="sliders" />
+      </div>
+      <div class="mySlides fade">
+        <img src="divine.jpg" style="width: 100%" class="sliders" />
+      </div>
+      <div class="mySlides fade">
+        <img src="patches.jpg" style="width: 100%" class="sliders" />
+      </div>
+      <div class="mySlides fade">
+        <img src="motivation.jpg" style="width: 100%" class="sliders" />
+      </div>
+    </center>
+    </div>
+    <br />
+    <div style="text-align: center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <div class="content">
+      <div class="message">
+        <div class="featured-quote">
+          <blockquote>
+            <p id="quote-text">
+              <footer id="quote-author"></footer>
+            </p>
+          </blockquote>
+          <script>
+            //featured quotes
+//quote data
+const quotes = [
+  {
+    text: "Believe you can and you're halfway there.",
+    author: "Theodore Roosevelt"
+  },
+  {
+    text: "The only way to do great work is to love what you do.",
+    author: "Steve Jobs"
+  },
+  {
+    text: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    author: "Winston Churchill"
+  }
+];
+//display random quote
+function displayQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  const quoteText = quotes[randomIndex].text;
+  const quoteAuthor = quotes[randomIndex].author;
+  document.getElementById("quote-text").textContent = quoteText;
+  document.getElementById("quote-author").textContent = `-${quoteAuthor}`;
+}
+//display quote on page load
+displayQuote();
+          </script>
+        </div>
+        
+      </div>
+      <div class="major">
+      <div class="left-section"><p>
+        <b>W</b>elcome to our quotes website! We're thrilled to share inspiring 
+        words with you. Explore, reflect, and let the wisdom of others motivate you 
+        to live your best life. Thank you for visiting!</p>
+      </div>
+      <div class="right-section">
+      <div class="quote-submission-form">
+        <h2>Submit Your Favorite Quote!</h2>
+        <form id="quote-submission-form" action="https://formsubmit.co/iyundhue@gmail.com" method="post">
+          <label for="quote-text">Quote:</label>
+          <textarea id="quote-text" name="quote-text"></textarea>
+          <label for="quote-author">Author:</label>
+          <input type="text" id="quote-author" name="quote-author">
+          <button id="submit-quote-btn">Submit Quote</button>
+        </form></div></div>
+        <script>
+          //quote submission
+handleQuoteSubmission(event) ;{
+  event.preventDefault();
+  const quoteText = document.getElementById("quote-text").Value;
+  const quoteAuthor = document.getElementById("quote-author").Value;
+  //quote response
+  alert(`Thank you for submitting the quote: "${quoteText}" by ${quoteAuthor}!`);
+}
+//add event listener to quote submission form
+document.getElementById("quote-submission-form").addEventListener("submit",handleQuoteSubmission);
+
+        </script>
+      </div>
+      <marquee behavior="scroll" direction="left">'THANK YOU FOR VISITING' </marquee>
+
+    </div>
+
+    <button id="back-to-top-btn" onclick="scrollToTop()">&#x2191</button>
+    <hr color="gold">
+    <footer id="main">
+      <div class="footer-content" id="about">
+        <h3>Royal<span class="logospan">Quotes.</span></h3>
+        <p id="pre">Royal Quotes is a blog website where
+  you will find great Quotes on
+            motivation, love,
+      among others beautifully designed 
+and in high quality.
+        </p>
+        <ul class="socials" id="Contact">
+          <li><a href="#"><img src="facebook.png" alt="facebook" class="social"></li></a>
+          <li><a href="#"><img src="instagram.png" alt="instagram" class="social"></li></a>
+          <li><a href="#"><img src="linkedin.png" alt="inkedin" class="social"></li></a>
+          <li><a href="#"><img src="twitter_1702656750240.png" alt="twitter" class="social"></li></a>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>RoyalQuotes &copy; 2024
+        </p>
+      </div>
+      <div class="footer-menu">
+        <ul class="f-menu">
+          <li><a href="index.html" id="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+    <script src="script.js"></script>
+  </div>
+  </body>
+</html>
